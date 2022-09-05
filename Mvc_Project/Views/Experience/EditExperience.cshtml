@@ -1,0 +1,44 @@
+﻿@using Mvc_Project.Models
+@model TblExperience
+@{
+    ViewBag.Title = "EditExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+    <h2>Deneyim Düzenleme Sayfası</h2>
+    <form method="post">
+        <label>Yetenek ID</label>
+        @Html.TextBoxFor(x => x.ExperienceID, new { type = "hidden" })
+        <br />
+
+
+
+        <label>Deneyim Başlığı</label>
+        @Html.TextBoxFor(x => x.ExperinceTitle, new { @class = "form-control" })
+        <br />
+
+
+
+        <label>Deneyim Tarih</label>
+        @Html.TextBoxFor(x => x.ExperienceDate, new { @class = "form-control" })
+
+
+        <label>Deneyim Açıklama</label>
+        @Html.TextBoxFor(x => x.ExperienceDescription, new { @class = "form-control" })
+
+
+
+
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+        <a  class="btn btn-danger" href="/Experience/Index/">Geri Dön</a>
+    </form>
+</div>
+<div class="col-lg-3"></div>

@@ -1,0 +1,26 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Resim Ekleme Sayfası</h2>
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+    <form method="post" enctype="multipart/form-data" class="form-group" style="margin-top:25px;">
+
+        <label>Resim</label>
+        <input type="File" name="ImageUrl" class="form-control" />
+        <br />
+      
+        <label>Resim Açıklaması</label>
+        <textarea type="text" rows="5" name="ImageDescription" maxlength="100" class="form-control"></textarea>
+        <br />
+        <button style="margin-top:15px;" class="btn btn-info">Ekle</button>
+        <a style="margin-top:15px;" class="btn btn-danger" href="/Image/Index/">Geri Dön</a>
+
+
+
+    </form>
+</div>
+<div class="col-lg-3"></div>

@@ -1,0 +1,40 @@
+﻿
+@using Mvc_Project.Models
+@model TblFeature
+@{
+    
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+    <h2>Özellik Düzenleme Sayfası</h2>
+    <form method="post">
+
+
+        
+        @Html.TextBoxFor(x => x.FeatureID, new { type = "hidden" })
+        <br />
+
+
+
+        <label>Özellik Başlığı</label>
+        @Html.TextBoxFor(x => x.FeatureTitle, new { @class = "form-control" })
+        <br />
+
+
+
+        <label>Özellik Logo</label>
+        @Html.TextBoxFor(x => x.FeatureLogo, new { @class = "form-control" })
+        <br />
+
+        <label>Özellik Açıklması</label>
+        @Html.TextBoxFor(x => x.FeatureDescription, new { @class = "form-control" , @maxlength = "100" })
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+        <a class="btn btn-danger" href="/Feature/Index/">Geri Dön</a>
+    </form>
+</div>
+<div class="col-lg-2"></div>

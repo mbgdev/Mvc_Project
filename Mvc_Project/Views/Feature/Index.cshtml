@@ -1,0 +1,38 @@
+﻿@using Mvc_Project.Models
+@model List<TblFeature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h2>Özelliklerim</h2>
+
+<div>
+    <a class="btn btn-success" style="margin-bottom:15px;" href="/Feature/AddFeature/">Yeni Özellik Ekle</a>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Logo</th>
+            <th>Açıklama</th>
+            <th>İşlemler</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FeatureID</td>
+                <td>@item.FeatureTitle</td>
+                <td><span class="@item.FeatureLogo"></span></td>
+                <td>@item.FeatureDescription</td>
+                <td>
+                    <a style="margin-top:5px;" href="/Feature/DeleteFeature/@item.FeatureID/" class="btn btn-danger">Sil</a>
+
+                    <a style="margin-top:5px;" href="/Feature/EditFeature/@item.FeatureID/" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

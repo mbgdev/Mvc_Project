@@ -1,0 +1,38 @@
+﻿
+
+
+@using Mvc_Project.Models
+@model TblEducation
+@{
+    ViewBag.Title = "EditSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+    <h2>Eğitim Düzenleme Sayfası</h2>
+    <form method="post">
+       
+        @Html.TextBoxFor(x => x.EducationID, new { type = "hidden" })
+        <br />
+
+
+
+        <label>Eğitim Başlığı</label>
+        @Html.TextBoxFor(x => x.EducationTitle, new { @class = "form-control" })
+        <br />
+
+
+
+        <label>Eğitim Tarihi</label>
+        @Html.TextBoxFor(x => x.EduationDate, new { @class = "form-control" })
+        <br />
+
+        <label>Eğitim Açıklması</label>
+        @Html.TextBoxFor(x => x.EducationDescription, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+        <a class="btn btn-danger" href="/Education/Index/">Geri Dön</a>
+    </form>
+</div>
+<div class="col-lg-3"></div>

@@ -1,0 +1,38 @@
+﻿@using Mvc_Project.Models
+@model List<TblImage>
+@{
+    
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h2>Resimlerim</h2>
+
+<div>
+    <a class="btn btn-success" style="margin-bottom:15px;" href="/Image/AddImage/">Yeni Resim Ekle</a>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Resim</th>
+            <th>Resim Yolu</th>
+            <th>Açıklama</th>
+            <th>İşlemler</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ImageID</td>
+                <td><img src="@item.ImageUrl" height="100" width="100" alt="Alternate Text" /></td>
+                <td>@item.ImageUrl</td>
+                <td>@item.ImageDescription</td>
+                <td>
+                    <a style="margin-top:5px;" href="/Image/DeleteImage/@item.ImageID/" class="btn btn-danger">Sil</a>
+
+                    <a style="margin-top:5px;" href="/Image/EditImage/@item.ImageID/" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,40 @@
+﻿
+@using Mvc_Project.Models
+@model TblImage
+@{
+
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+    <h2>Özellik Düzenleme Sayfası</h2>
+    <form method="post" enctype="multipart/form-data">
+
+
+
+        @Html.TextBoxFor(x => x.ImageID, new { type = "hidden" })
+        <br />
+
+        @*<label>Resim</label>
+        <input type="File" name="ImageUrl" class="form-control" />
+        <br />*@
+
+        <label>Resim Url Başlığı</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+        <br />
+
+
+
+        <label>Resim Açıklamsı</label>
+        @Html.TextBoxFor(x => x.ImageDescription, new { @class = "form-control" })
+        <br />
+
+
+        <button class="btn btn-primary">Güncelle</button>
+        <a class="btn btn-danger" href="/Image/Index/">Geri Dön</a>
+    </form>
+</div>
+<div class="col-lg-2"></div>

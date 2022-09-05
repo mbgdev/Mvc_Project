@@ -1,0 +1,36 @@
+﻿@using Mvc_Project.Models
+@model List<TblExperience>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Deneyimlerim</h2>
+
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+    <a class="btn btn-success" style="margin-bottom:15px;" href="/Experience/AddExperience/">Yeni Deneyim Ekle</a>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Tarih</th>
+            <th>Açıklama</th>
+            <th>İşlemler</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ExperienceID</td>
+                <td>@item.ExperinceTitle</td>
+                <td>@item.ExperienceDate</td>
+                <td>@item.ExperienceDescription</td>
+                <td>
+                    <a href="/Experience/DeleteExperience/@item.ExperienceID/" class="btn btn-danger">Sil</a>
+                    <a href="/Experience/EditExperience/@item.ExperienceID/" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="col-lg-2"></div>

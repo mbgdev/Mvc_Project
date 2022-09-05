@@ -1,0 +1,39 @@
+﻿@using Mvc_Project.Models
+@model List<TblEducation>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h2>Eğitimlerim</h2>
+
+<div>
+    <a class="btn btn-success" style="margin-bottom:15px;" href="/Education/AddEducation/">Yeni Eğitim Ekle</a>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+
+            <th>Başlık</th>
+            <th>Tarih</th>
+            <th>Açıklama</th>
+            <th>İşlemler</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EducationID</td>
+                <td>@item.EducationTitle</td>
+                <td>@item.EduationDate</td>
+                <td>@item.EducationDescription</td>
+                <td>
+                    <a href="/Education/DeleteEducation/@item.EducationID/" class="btn btn-danger">Sil</a>
+
+                    <a style="margin-top:5px;" href="/Education/EditEducation/@item.EducationID/" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
