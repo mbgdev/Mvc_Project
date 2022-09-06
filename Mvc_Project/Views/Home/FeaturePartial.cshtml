@@ -1,0 +1,30 @@
+﻿
+@model List<TblFeature>
+
+<section class="w3l-feature-3" id="features">
+    <div class="grid top-bottom">
+        <div class="container">
+            <div class="heading text-center mx-auto">
+                <h3 class="head text-white">I'm Available For Hire</h3>
+                <p class="my-3 head text-white">
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Nulla mollis dapibus nunc, ut rhoncus
+                    turpis sodales quis. Integer sit amet mattis quam.
+                </p>
+            </div>
+            <div class="middle-section grid-column text-center mt-5 pt-3">
+                @foreach (var item in Model)
+                {
+
+
+                <div class="three-grids-columns">
+                    <span class="@item.FeatureLogo"></span>
+                    <h4>@item.FeatureTitle</h4>
+                    <p>@item.FeatureDescription</p>
+
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
