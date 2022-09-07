@@ -8,36 +8,40 @@
             <div class="heading text-center mx-auto mb-5">
                 <h3 class="head">Projelerimden Görseller</h3>
                 <p class="my-3 head">
-                   @ViewBag.v
+                    @ViewBag.v
                 </p>
             </div>
             <input id="tab1" type="radio" name="tabs" checked>
-            <label class="tabtle" for="tab1">C# Projelerim</label>
+            <label class="tabtle" for="tab1">Tüm Projelerim</label>
 
             <input id="tab2" type="radio" name="tabs">
-            <label class="tabtle" for="tab2">.Net Projelerim</label>
+            <label class="tabtle" for="tab2">.Net</label>
 
             <input id="tab3" type="radio" name="tabs">
-            <label class="tabtle" for="tab3">Photography</label>
+            <label class="tabtle" for="tab3">Mvc</label>
 
             <input id="tab4" type="radio" name="tabs">
-            <label class="tabtle" for="tab4">Website</label>
+            <label class="tabtle" for="tab4">C# Projelerim</label>
+
 
             <section id="content1" class="tab-content text-left">
                 <div class="d-grid grid-col-3">
+
                     @foreach (var item in Model)
                     {
 
+                        <div class="product">
+                            <a href="@item.ImageUrl" data-lightbox="example-set"
+                               data-title="@item.ImageDescription">
+                                <figure>
+                                    <img src="@item.ImageUrl" class="img-responsive" alt="@item.ImageCategory" />
+                                </figure>
+                            </a>
 
-                    <div class="product">
-                        <a href="@item.ImageUrl" data-lightbox="example-set"
-                           data-title="@item.ImageDescription">
-                            <figure>
-                                <img src="@item.ImageUrl" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                        </div>
 
-                    </div>
+
+
                     }
 
                 </div>
@@ -45,118 +49,78 @@
 
             <section id="content2" class="tab-content text-left">
                 <div class="d-grid grid-col-3">
-                    <div class="product">
-                        <a href="~/Content/assets/images/g7.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g7.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g8.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g8.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g1.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g1.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                    @foreach (var item in Model)
+                    {
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g2.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g2.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                        if (item.ImageCategory == "Mvc")
+                        {
+                            <div class="product">
+                                <a href="@item.ImageUrl" data-lightbox="example-set"
+                                   data-title="@item.ImageDescription">
+                                    <figure>
+                                        <img src="@item.ImageUrl" class="img-responsive" alt="@item.ImageCategory" />
+                                    </figure>
+                                </a>
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g3.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g3.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                            </div>
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g4.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g4.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                        }
 
-                    </div>
+                    }
                 </div>
             </section>
 
             <section id="content3" class="tab-content text-left">
                 <div class="d-grid grid-col-3">
-                    <div class="product">
-                        <a href="~/Content/assets/images/g5.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g5.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                    @foreach (var item in Model)
+                    {
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g6.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g6.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                        if (item.ImageCategory == ".Net")
+                        {
+                            <div class="product">
+                                <a href="@item.ImageUrl" data-lightbox="example-set"
+                                   data-title="@item.ImageDescription">
+                                    <figure>
+                                        <img src="@item.ImageUrl" class="img-responsive" alt="@item.ImageCategory" />
+                                    </figure>
+                                </a>
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g7.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g7.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                            </div>
+                        }
 
-                    </div>
+                    }
                 </div>
             </section>
 
             <section id="content4" class="tab-content text-left">
                 <div class="d-grid grid-col-3">
-                    <div class="product">
-                        <a href="~/Content/assets/images/g8.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g8.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                    @foreach (var item in Model)
+                    {
 
-                    </div>
-                    <div class="product">
-                        <a href="~/Content/assets/images/g1.jpg" data-lightbox="example-set"
-                           data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="~/Content/assets/images/g1.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
+                        if (item.ImageCategory == "Csharp")
+                        {
+                            <div class="product">
+                                <a href="@item.ImageUrl" data-lightbox="example-set"
+                                   data-title="@item.ImageDescription">
+                                    <figure>
+                                        <img src="@item.ImageUrl" class="img-responsive" alt="@item.ImageCategory" />
+                                    </figure>
+                                </a>
 
-                    </div>
+                            </div>
+                        }
+
+                    }
                 </div>
             </section>
+
+
         </div>
     </div>
     <!-- Products4 block -->
 </div>
+
+<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>
+<script src="~/Content/assets/js/lightbox-plus-jquery.min.js"></script>

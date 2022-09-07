@@ -1,0 +1,33 @@
+﻿
+@using Mvc_Project.Models
+@model List<TblExperience>
+
+<section class="services-12" id="experience">
+    <div class="form-12-content">
+        <div class="container">
+            <div class="grid grid-column-2 ">
+
+                <div class="column1">
+                    <h3 class="mb-5">Experiences</h3>
+
+
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="experience-top">
+                            <h5>@item.ExperienceDate</h5>
+                            <h4>@item.ExperinceTitle</h4>
+                            <p class="my-3 text-white">@item.ExperienceDescription</p>
+
+                        </div>
+                            }
+
+
+
+                    </div>
+                @Html.Action("EducationPartial")
+            </div>
+        </div>
+    </div>
+</section>
+

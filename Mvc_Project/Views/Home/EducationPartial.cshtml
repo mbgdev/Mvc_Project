@@ -1,0 +1,24 @@
+﻿
+@using Mvc_Project.Models
+@model List<TblEducation>
+
+
+
+
+
+<div class="column2">
+    <h3 class="mb-5">Education</h3>
+    @foreach (var item in Model)
+    {
+        <div class="experience-top">
+
+            <h5>@item.EduationDate</h5>
+            <h4>@item.EducationTitle</h4>
+            <p class="my-3 text-white">@item.EducationDescription</p>
+        </div>
+
+    }
+
+
+</div>
+

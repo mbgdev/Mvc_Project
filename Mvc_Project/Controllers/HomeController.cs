@@ -76,5 +76,29 @@ namespace Mvc_Project.Controllers
             return PartialView(result);
         }
 
+        public PartialViewResult ExperiencePartial()
+        {
+
+            
+            var result = db.TblExperience.ToList();
+            return PartialView(result);
+        }
+
+        public PartialViewResult EducationPartial()
+        {
+
+
+            var result = db.TblEducation.ToList();
+            return PartialView(result);
+        }
+
+        public PartialViewResult TestimonialPartial()
+        {
+
+
+            var result = db.TblTestimonial.ToList();
+            return PartialView(result);
+        }
+
     }
 }

@@ -126,11 +126,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutPartialController.cs" />
+    <Compile Include="Controllers\ContactPartialController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\ServicesPartialController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -309,6 +312,17 @@
     <Content Include="Views\Home\SkillPartial.cshtml" />
     <Content Include="Views\Home\FeaturePartial.cshtml" />
     <Content Include="Views\Home\ImagePartial.cshtml" />
+    <Content Include="Views\Home\ExperiencePartial.cshtml" />
+    <Content Include="Views\Home\EducationPartial.cshtml" />
+    <Content Include="Views\Home\TestimonialPartial.cshtml" />
+    <Content Include="Views\AboutPartial\MyAboutPartial.cshtml" />
+    <Content Include="Views\AboutPartial\ServicesPartial.cshtml" />
+    <Content Include="Views\AboutPartial\StatisticsPartial.cshtml" />
+    <Content Include="Views\AboutPartial\SubscribePartial.cshtml" />
+    <Content Include="Views\ServicesPartial\MyServicesPartial.cshtml" />
+    <Content Include="Views\ServicesPartial\PackagePartial.cshtml" />
+    <Content Include="Views\ContactPartial\FormPartial.cshtml" />
+    <Content Include="Views\ContactPartial\AddressPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
