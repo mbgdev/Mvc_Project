@@ -31,5 +31,8 @@ namespace Mvc_Project.Models
         public DbSet<TblImage> TblImage { get; set; }
         public DbSet<TblSkill> TblSkill { get; set; }
         public DbSet<TblTestimonial> TblTestimonial { get; set; }
+        public DbSet<TblMember> TblMember { get; set; }
+        public DbSet<TblMemberRole> TblMemberRole { get; set; }
+        public DbSet<TblRole> TblRole { get; set; }
     }
 }
