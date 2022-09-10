@@ -19,10 +19,7 @@ namespace Mvc_Project.Areas.Member.Controllers
         {
             return View();
         }
-        public ActionResult Indwex()
-        {
-            return View();
-        }
+      
 
 
 
@@ -62,7 +59,8 @@ namespace Mvc_Project.Areas.Member.Controllers
 
                     db.SaveChanges();
 
-                    return RedirectToAction("Index", "Login");
+                    return View();
+
                 }
 
 
@@ -72,7 +70,7 @@ namespace Mvc_Project.Areas.Member.Controllers
 
                     string hour = DateTime.Now.Hour.ToString();
 
-                    string minute = (DateTime.Now.Minute+1).ToString();
+                    string minute = (DateTime.Now.Minute+2).ToString();
 
                     ViewBag.Message1 = "3 yanlış giriş denemesi yapılmıştır.";
                     ViewBag.Message2 = hour + ":" + minute + " kadar giriş yapamazsınız.";
@@ -89,7 +87,7 @@ namespace Mvc_Project.Areas.Member.Controllers
                     string hour = (values.Lockout_End / 60).ToString();
 
 
-                    string minute = (values.Lockout_End % 60).ToString();
+                    string minute = ((values.Lockout_End % 60)+1).ToString();
 
                     ViewBag.Message1 = "3 yanlış giriş denemesi yapılmıştır.";
                     ViewBag.Message2 = hour + ":" + minute + " kadar giriş yapamazsınız.";
